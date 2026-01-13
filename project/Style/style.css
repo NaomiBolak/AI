@@ -1,0 +1,287 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #fcf8f3; /* צבע שמנת עדין */
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); /* טקסטורה עדינה */
+    display: flex;
+    flex-direction: column; /* מסדר את ה-header מעל התוכן */
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.main-header {
+    width: 100%;
+    background-color: #ff6b6b;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 50px;
+    
+    /* השינוי המרכזי כאן */
+    display: flex;
+    flex-direction: column; /* גורם לאלמנטים לעמוד אחד מתחת לשני */
+    align-items: center;    /* ממרכז אותם אופקית */
+    justify-content: center;
+    gap: 10px;              /* יוצר רווח קטן בין הכותרת לכפתורים */
+}
+
+/* ודאי שגם ה-nav ממורכז */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 5px; /* רווח קטן מתחת לכותרת */
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-content h1 {
+    margin: 0px; 
+    font-size: 2rem;
+   
+}
+
+.icon {
+    font-size: 2.5rem;
+}
+
+.login-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 350px;
+    border-top: 5px solid #ff6b6b; /* פס צבע תואם ל-header */
+    text-align: center;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ff6b6b; /* שינוי צבע הכפתור שיתאים למיתוג */
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+
+button:hover {
+    background-color: #ee5253;
+    transform: scale(1.02);
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.nav-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    padding: 5px 15px;
+    width: auto;
+    font-size: 0.9rem;
+}
+
+/* שורת חיפוש וכפתור הוספה */
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.action-btn {
+    background-color: #2ecc71;
+    width: auto;
+    white-space: nowrap;
+}
+
+/* גריד של מתכונים */
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.recipe-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.signup-link {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.signup-link a {
+    color: #ff6b6b; /* הצבע האדום של המיתוג שלך */
+    text-decoration: none; /* מסיר את הקו התחתון ברירת המחדל */
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline; /* מוסיף קו תחתון רק כשמעבירים עכבר */
+}
+
+/* עיצוב ספציפי למסך הגדרות */
+.settings-card {
+    width: 450px;
+    padding: 40px;
+}
+
+.add-recipe-card {
+    width: 500px;
+    padding: 40px;
+}
+
+.recipe-view-card {
+    width: 600px;
+    padding: 40px;
+}
+
+.controls {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.controls button {
+    margin: 0 10px;
+    width: auto;
+    padding: 10px 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.form-group textarea {
+    min-height: 100px;
+}
+
+/* מצב כהה */
+.dark-mode {
+    background-color: #2c3e50 !important;
+    color: #ecf0f1 !important;
+}
+
+.dark-mode .main-header {
+    background-color: #34495e !important;
+}
+
+.dark-mode .login-container,
+.dark-mode .settings-card,
+.dark-mode .add-recipe-card,
+.dark-mode .recipe-view-card {
+    background-color: #34495e !important;
+    color: #ecf0f1 !important;
+    border-top-color: #e74c3c !important;
+}
+
+.dark-mode .recipe-card {
+    background-color: #34495e !important;
+    color: #ecf0f1 !important;
+}
+
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+    background-color: #2c3e50 !important;
+    color: #ecf0f1 !important;
+    border-color: #7f8c8d !important;
+}
+
+.dark-mode .setting-group label,
+.dark-mode .form-group label {
+    color: #ecf0f1 !important;
+}
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* רווח בין שורות ההגדרות */
+    margin-top: 20px;
+}
+
+.setting-group {
+    display: flex;
+    justify-content: space-between; /* שם את הטקסט בצד אחד והשדה בצד שני */
+    align-items: center;
+    text-align: right;
+    direction: rtl;
+}
+
+.setting-group label {
+    flex: 1;
+    font-weight: 600;
+    color: #444;
+}
+
+.setting-group input, 
+.setting-group select {
+    flex: 0 0 100px; /* נותן לשדות גודל קבוע ואחיד */
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.save-btn {
+    margin-top: 10px;
+    background-color: #ff6b6b;
+    font-size: 1.1rem;
+}
+
+.message {
+    margin-top: 15px;
+    font-weight: bold;
+}

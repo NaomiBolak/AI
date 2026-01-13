@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>רשימת מתכונים</title>
+    <link rel="stylesheet" href="../Style/style.css">
+    <script src="../JS/recipes.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <span class="icon">🍳</span>
+            <h1>המתכונים שלי</h1>
+        </div>
+        <nav>
+            <button onclick="window.location.href='myChoice.html'" class="nav-btn">⚙️ הגדרות</button>
+            <button id="logoutBtn" class="nav-btn">יציאה</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="חפש מתכון...">
+            <button id="addRecipeBtn" class="action-btn">+ הוסף מתכון חדש</button>
+        </div>
+
+        <div id="recipesList" class="recipes-grid">
+            </div>
+    </main>
+</body>
+</html>
