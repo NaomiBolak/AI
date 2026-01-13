@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>צפייה במתכון</title>
+    <link rel="stylesheet" href="../Style/style.css">
+    <script src="../JS/viewRecipe.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <h1 id="recipeTitle">שם המתכון</h1>
+        </div>
+        <nav>
+            <button onclick="window.location.href='recipeList.html'" class="nav-btn">חזרה לרשימה</button>
+        </nav>
+    </header>
+
+    <main class="login-container recipe-view-card">
+        <section id="ingredientsSection">
+            <h3>חומרים:</h3>
+            <ul id="ingredientsList"></ul>
+        </section>
+
+        <hr>
+
+        <section id="instructionsSection">
+            <h3>אופן ההכנה:</h3>
+            <div id="instructionsContainer"></div>
+        </section>
+
+        <div class="controls">
+            <button id="startBtn" class="action-btn">▶️ התחל הקראה</button>
+            <button id="pauseBtn" class="action-btn" style="display:none;">⏸️ עצור</button>
+        </div>
+    </main>
+</body>
+</html>
